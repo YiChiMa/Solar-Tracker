@@ -5,7 +5,7 @@
 
 This is a solar tracker that will automatically track the light source in both vertical and horizontal directions. One of the main keys for automation is the physical design of shield and photoresistors.
 
-* Laser Cut Files - find them [here](https://github.com/YiChiMa/Solar-Tracker/LaserCut).
+* Laser Cut Files - find them [here](https://github.com/YiChiMa/Solar-Tracker/tree/master/LaserCut).
 
 
 ## Mechanical Design
