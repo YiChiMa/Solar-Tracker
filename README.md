@@ -8,6 +8,8 @@ This is a solar tracker that will automatically track the light source in both v
 * Laser Cut Files - find them [here](https://github.com/YiChiMa/Solar-Tracker/tree/master/LaserCut).
 
 
+![Overall Design](Sketches/photo.jpg)
+
 ## Mechanical Design
 
 ##### The Sketch of Overall Mechanical Design
