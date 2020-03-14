@@ -1,9 +1,9 @@
 
-**IMPORTANT:** This page is still under construction. Thank you for your understanding.
-
 # Solar Tracker for Device Charging Station
 
-This is a solar tracker that will automatically track the light source in both vertical and horizontal directions. One of the main keys for automation is the physical design of shield and photoresistors.
+This is a solar tracker experimenting with a novel tracking system for the light source in both vertical and horizontal directions. One of the main keys to automation is the physical design of shield and photoresistors.
+
+I used Solidworks to work on the model and prototyped it with the laser cutter.
 
 * Laser Cut Files - find them [here](https://github.com/YiChiMa/Solar-Tracker/tree/master/LaserCut).
 
@@ -16,6 +16,14 @@ This is a solar tracker that will automatically track the light source in both v
 
 ![Overall Design](Sketches/Overall.jpg)
 
+##### Rendered 3D Model
+
+![Overall Design](Sketches/rendered.JPG)
+
+##### Exploded View for the Model
+
+![Overall Design](Sketches/exploded.PNG)
+
 The mechanical design mainly allows the solar panel to move in both vertical and horizontal directions. Both horizontal and vertical rotation servos can move the panel in 180 degrees, which means that the panel can receive light from everywhere on the top.  
 
 ## The Shield and the Photoresistors
@@ -24,23 +32,18 @@ The mechanical design mainly allows the solar panel to move in both vertical and
 
 ![Figure 1](Sketches/Shield3Dx.jpg)
 
-The shield is mounted on the solar panel plane (vertical rotation level). In this design. Only three photoresistors are used since three points define a plane.
+The shield and the photoresistor sensors are used as a mechanism to report if the solar panel is directly aimed at the light source or not.
 
-This is the simple 3D sketch demonstrating the shield acting as a mechanism to report if the solar panel
-The shield will block some light projecting on one of the photoresistors if the solar panel plane is tilted.
+The shield is mounted on the top of the solar panel plane (vertical rotation level). In this design, three photoresistors are used since three points define a plane.
 
-As one of the photoresistors does not receive the full light, its resistance will decrease. This will signal the program to adjust the angle in either vertical or horizontal directions. If all of the three photoresistors receive the same amount of light, the adjustment will stop, which means that the solar panel plane is receiving most of the light.
-
-This is a more detailed sketch.
-
-![Figure 2](Sketches/Shield.jpeg)
+If the solar panel plane is tilted, the shield will block some light projecting on one of the photoresistors. Thus, the photoresistor would receive less light so it signals the microcontroller to adjust the angle through the servo motor. If all of the three photoresistors receive the same amount of light, it means that no photoresistor is blocked by the shield. The microcontroller will note that the solar panel plane receives the most of the light from this particular angle. Then, the servo motor will stop adjusting the angle.
 
 
 ## Schematics
 ##### Input Electronic Schematics
 ![Figure 3](Sketches/SchematicsResistors.jpg)
 
-The microcontroller will read the values of the photoresistors and decide what to adjust.
+The microcontroller will compare the light intensity from each photoresistor.
 
 ##### Output Electronic Schematics
 ![Figure 3](Sketches/SchematicsServo.jpg)
@@ -49,7 +52,7 @@ The microcontroller will signify which servo motor to move and when to stop movi
 
 ## Code
 
-This is the arduino code with extension ``.ino``
+This is the Arduino code with extension ``.ino``
 
 ```
 #include <Servo.h>
