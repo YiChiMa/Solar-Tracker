@@ -28,11 +28,11 @@ The mechanical design mainly allows the solar panel to move in both vertical and
 
 ## The Shield and the Photoresistors
 
-##### Simple 3D sketch
+##### Simple sketch
 
-![Figure 1](Sketches/Shield3Dx.jpg)
+![Figure 1](Sketches/shieldSketch.png)
 
-The shield and the photoresistor sensors are used as a mechanism to report if the solar panel is directly aimed at the light source or not.
+The shield and the photoresistor sensors on the top of the solar panel are used as a mechanism to report if the solar panel is directly aimed at the light source or not.
 
 The shield is mounted on the top of the solar panel plane (vertical rotation level). In this design, three photoresistors are used since three points define a plane.
 
