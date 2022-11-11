@@ -16,10 +16,6 @@ I used Solidworks to work on the model and prototyped it with the laser cutter.
 
 ![Overall Design](Sketches/Overall.jpg)
 
-##### Rendered 3D Model
-
-![Overall Design](Sketches/rendered.JPG)
-
 ##### Exploded View for the Model
 
 ![Overall Design](Sketches/exploded.PNG)
